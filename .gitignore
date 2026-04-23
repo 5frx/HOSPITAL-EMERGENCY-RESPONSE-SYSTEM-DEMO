@@ -1,0 +1,15 @@
+# Compiled output
+bin/
+
+# JavaFX SDK — teammates download this themselves
+lib/javafx-sdk-26/
+
+# VSCode personal settings
+.vscode/
+
+# Java class files
+*.class
+
+# OS junk
+.DS_Store
+Thumbs.db
