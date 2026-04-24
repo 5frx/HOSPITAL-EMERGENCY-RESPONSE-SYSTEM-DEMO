@@ -331,16 +331,11 @@ public class MainController {
     // ── Helpers ──────────────────────────────────────────────────────────────
 
     private void refreshAll() {
-        System.out.println("DEBUG availableCount label: " + availableCount);
-        System.out.println("DEBUG fleetRows: " + fleetRows);
-
         long available  = system.getAmbulanceRepository().findAll().stream()
                 .filter(a -> a.getStatus() == AmbulanceStatus.AVAILABLE).count();
         long dispatched = system.getAmbulanceRepository().findAll().stream()
                 .filter(a -> a.getStatus() == AmbulanceStatus.DISPATCHED).count();
 
-        System.out.println("DEBUG available count from repo: " + available);
-        System.out.println("DEBUG dispatched count from repo: " + dispatched);
 
         availableCount.setText(String.valueOf(available));
         dispatchedCount.setText(String.valueOf(dispatched));
