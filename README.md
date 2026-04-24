@@ -34,6 +34,8 @@ https://www.oracle.com/java/technologies/downloads/
 ## Setup — 3 steps
 
 ### Step 1 — Download JavaFX SDK 26
+Go to: https://gluonhq.com/products/javafx/
+
 Select:
 - Version: JavaFX 26
 - Operating System: **your OS**
