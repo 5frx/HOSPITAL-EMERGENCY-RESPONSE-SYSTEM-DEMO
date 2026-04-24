@@ -1,18 +1,78 @@
-## Getting Started
+# Hospital Emergency Response System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A Java desktop application simulating a hospital emergency dispatch system.
+Built with JavaFX for the GUI and implements four design patterns:
+Singleton, Factory, Strategy and Observer.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## What the system does
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Receives emergency requests with type, urgency level and location
+- Automatically selects the closest ambulance carrying the required equipment
+- Notifies relevant hospital staff based on urgency level
+- Displays a live dispatch map, ambulance fleet status and dispatch log
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Requirements
 
-## Dependency Management
+- Java JDK 24 or higher
+- JavaFX SDK 26
+- Windows (PowerShell)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Check your Java version
+Open PowerShell and run:
+
+`java -version`
+
+You need version 24 or higher. If not, download JDK 24 from:
+https://www.oracle.com/java/technologies/downloads/
+
+---
+
+## Setup — 3 steps
+
+### Step 1 — Download JavaFX SDK 26
+Select:
+- Version: JavaFX 26
+- Operating System: **your OS**
+- Architecture: x64 (or aarch64 for Apple Silicon Macs)
+- Type: SDK
+
+Download and extract the zip.
+
+### Step 2 — Place the SDK in the project
+Inside the project folder you will find a `lib/` folder.
+Place the extracted `javafx-sdk-26` folder inside it so the
+structure looks like this:
+
+final project/
+├── src/
+├── lib/
+│   └── javafx-sdk-26/    ← place it here
+│       └── lib/
+│           ├── javafx.controls.jar
+│           ├── javafx.graphics.jar
+│           └── ...
+├── run.ps1
+└── README.md
+
+### Step 3 — Run the application
+**Windows (PowerShell):**
+`.\run.ps1`
+If PowerShell blocks the script, run this once as administrator:
+`Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
+
+**macOS / Linux (Terminal):**
+```chmod +x run.sh
+./run.sh```
+
+If Java is not found, make sure JDK 24 is on your PATH:
+```
+export JAVA_HOME=/path/to/jdk-24
+export PATH=JAVAHOME/bin:JAVA_HOME/bin:
+JAVAH​OME/bin:PATH
+```
+
+The application window will open automatically.
