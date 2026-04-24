@@ -46,7 +46,7 @@ Download and extract the zip.
 Inside the project folder you will find a `lib/` folder.
 Place the extracted `javafx-sdk-26` folder inside it so the
 structure looks like this:
-
+```
 final project/
 ├── src/
 ├── lib/
@@ -57,18 +57,25 @@ final project/
 │           └── ...
 ├── run.ps1
 └── README.md
-
+```
 ### Step 3 — Run the application
 **Windows (PowerShell):**
-`.\run.ps1`
+```
+.\run.ps1
+```
 If PowerShell blocks the script, run this once as administrator:
-`Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
+```
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+```
 
 **macOS / Linux (Terminal):**
-```chmod +x run.sh
-./run.sh```
+```
+chmod +x run.sh
+./run.sh
+```
 
 If Java is not found, make sure JDK 24 is on your PATH:
+
 ```
 export JAVA_HOME=/path/to/jdk-24
 export PATH=JAVAHOME/bin:JAVA_HOME/bin:
